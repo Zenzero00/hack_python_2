@@ -10,5 +10,13 @@ text: ["a","b"] output => ["2","1"]
 
 def fn_hack_8(s):
     result = s
-    #...
+    lv = []
+    x = len(result)
+    for i in range(len(result)):
+        if len(result) % 2 == 0:
+            lv.append(str(x))
+        else:
+            lv.append(result[x - 1] + "-" + str(x))
+        x -= 1
+    result = lv
     return result
